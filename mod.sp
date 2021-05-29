@@ -1,10 +1,9 @@
 mod "zoom" {
   title         = "Zoom Compliance"
-  description   = "Steampipe Mod for Zoom"
   description   = "Run individual configuration, compliance and security controls or full compliance benchmarks for CIS for Zoom using Steampipe."
   color         = "#2D8CFF"
-  documentation = file("./zoom_cis_docs.md")
-  icon          = "/images/plugins/turbot/zoom.svg"
+  documentation = file("./docs/index.md")
+  icon          = "/images/plugins/turbot/zoom-compliance.svg"
   categories    = ["cis", "compliance", "saas", "security"]
 
   opengraph {
