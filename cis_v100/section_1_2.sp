@@ -66,7 +66,7 @@ control "cis_v100_1_2_1_2" {
 }
 
 benchmark "cis_v100_1_2_2" {
-  title         = "1.2.1 Cloud Recording"
+  title         = "1.2.2 Cloud Recording"
   tags = merge(local.cis_v100_common_tags, {
     cis_item_id = "1.2.2"
   })
