@@ -1,4 +1,4 @@
-mod "zoom" {
+mod "zoom_compliance" {
   title         = "Zoom Compliance"
   description   = "Run individual configuration, compliance and security controls or full compliance benchmarks for CIS for Zoom using Steampipe."
   color         = "#2D8CFF"
