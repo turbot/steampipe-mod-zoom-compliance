@@ -1,3 +1,9 @@
+## v0.3 [2021-06-01]
+
+_Bug fixes_
+
+- Update Overview with a valid control example to run.
+
 ## v0.2 [2021-06-01]
 
 _Bug fixes_
