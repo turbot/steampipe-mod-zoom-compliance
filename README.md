@@ -41,7 +41,7 @@ steampipe check benchmark.cis_v100
 Run a specific control:
 
 ```shell
-steampipe check control.cis_v100_1_2_1_1
+steampipe check control.cis_v100_1_2_3_1
 ```
 
 ## Developing

@@ -45,13 +45,13 @@ steampipe check all
 Run a single benchmark:
 
 ```shell
-steampipe check benchmark.cis_v130
+steampipe check benchmark.cis_v100
 ```
 
 Run a specific control:
 
 ```shell
-steampipe check control.cis_v130_2_1_1
+steampipe check control.cis_v100_1_2_3_1
 ```
 
 ### Credentials
