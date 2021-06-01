@@ -41,7 +41,7 @@ control "cis_v100_1_3_3" {
     cis_type     = "manual"
     cis_level    = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       a.account_id as resource,

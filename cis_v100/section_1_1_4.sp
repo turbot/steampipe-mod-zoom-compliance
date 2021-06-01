@@ -44,7 +44,7 @@ control "cis_v100_1_1_4_1_1" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -65,7 +65,7 @@ control "cis_v100_1_1_4_1_2" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -108,7 +108,7 @@ control "cis_v100_1_1_4_2_1" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -153,7 +153,7 @@ control "cis_v100_1_1_4_3_1" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -174,7 +174,7 @@ control "cis_v100_1_1_4_3_2" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -195,7 +195,7 @@ control "cis_v100_1_1_4_3_3" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -227,7 +227,7 @@ control "cis_v100_1_1_4_4_1" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -249,7 +249,7 @@ control "cis_v100_1_1_4_4_2" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -303,7 +303,7 @@ control "cis_v100_1_1_4_7" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -335,7 +335,7 @@ control "cis_v100_1_1_4_9" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -367,7 +367,7 @@ control "cis_v100_1_1_4_11" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -388,7 +388,7 @@ control "cis_v100_1_1_4_12" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -409,7 +409,7 @@ control "cis_v100_1_1_4_13" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -430,7 +430,7 @@ control "cis_v100_1_1_4_14" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -451,7 +451,7 @@ control "cis_v100_1_1_4_15" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -483,7 +483,7 @@ control "cis_v100_1_1_4_17" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case

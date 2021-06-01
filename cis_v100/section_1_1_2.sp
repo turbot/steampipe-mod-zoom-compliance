@@ -44,7 +44,7 @@ control "cis_v100_1_1_2_1_1" {
     cis_type    = "automated"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -66,7 +66,7 @@ control "cis_v100_1_1_2_1_2" {
     cis_type    = "automated"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -88,7 +88,7 @@ control "cis_v100_1_1_2_1_3" {
     cis_type    = "automated"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -110,7 +110,7 @@ control "cis_v100_1_1_2_1_4" {
     cis_type    = "automated"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -132,7 +132,7 @@ control "cis_v100_1_1_2_1_5" {
     cis_type    = "automated"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -154,7 +154,7 @@ control "cis_v100_1_1_2_1_6" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -176,7 +176,7 @@ control "cis_v100_1_1_2_2" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -198,7 +198,7 @@ control "cis_v100_1_1_2_3" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -231,7 +231,7 @@ control "cis_v100_1_1_2_4" {
   tags = merge(local.cis_v100_common_tags, {
     cis_item_id = "1.1.2.4"
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -266,7 +266,7 @@ control "cis_v100_1_1_2_5" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -288,7 +288,7 @@ control "cis_v100_1_1_2_6" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -310,7 +310,7 @@ control "cis_v100_1_1_2_7" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -332,7 +332,7 @@ control "cis_v100_1_1_2_8" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -378,7 +378,7 @@ control "cis_v100_1_1_2_10" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -424,7 +424,7 @@ control "cis_v100_1_1_2_12" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,

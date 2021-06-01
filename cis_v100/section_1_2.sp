@@ -41,7 +41,7 @@ control "cis_v100_1_2_1_1" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -88,7 +88,7 @@ control "cis_v100_1_2_2_1" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -109,7 +109,7 @@ control "cis_v100_1_2_2_2" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -130,7 +130,7 @@ control "cis_v100_1_2_2_3" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -162,7 +162,7 @@ control "cis_v100_1_2_2_5" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -183,7 +183,7 @@ control "cis_v100_1_2_2_6" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -218,7 +218,7 @@ control "cis_v100_1_2_3_1" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -295,7 +295,7 @@ control "cis_v100_1_2_4_1" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -316,7 +316,7 @@ control "cis_v100_1_2_4_2" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -359,7 +359,7 @@ control "cis_v100_1_2_5_1" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -380,7 +380,7 @@ control "cis_v100_1_2_5_2" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       account_id as resource,
       case
@@ -415,7 +415,7 @@ control "cis_v100_1_2_6_1" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -437,7 +437,7 @@ control "cis_v100_1_2_6_2" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -459,7 +459,7 @@ control "cis_v100_1_2_6_3" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -481,7 +481,7 @@ control "cis_v100_1_2_6_4" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -503,7 +503,7 @@ control "cis_v100_1_2_6_5" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -537,7 +537,7 @@ control "cis_v100_1_2_7_1" {
     cis_type    = "manual"
     cis_level   = 1
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -581,7 +581,7 @@ control "cis_v100_1_2_8" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -603,7 +603,7 @@ control "cis_v100_1_2_9" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -622,7 +622,7 @@ control "cis_v100_1_2_10" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -644,7 +644,7 @@ control "cis_v100_1_2_11" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -666,7 +666,7 @@ control "cis_v100_1_2_12" {
     cis_type    = "manual"
     cis_level   = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,

@@ -52,7 +52,7 @@ control "cis_v100_3_1_1_1_1" {
     cis_item_id = "3.1.1.1.1"
     cis_level = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -73,7 +73,7 @@ control "cis_v100_3_1_1_1_2" {
     cis_item_id = "3.1.1.1.2"
     cis_level = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -94,7 +94,7 @@ control "cis_v100_3_1_1_1_3" {
     cis_item_id = "3.1.1.1.1"
     cis_level = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -115,7 +115,7 @@ control "cis_v100_3_1_1_1_4" {
     cis_item_id = "3.1.1.1.4"
     cis_level = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -216,7 +216,7 @@ control "cis_v100_3_1_1_3_2" {
     cis_item_id = "3.1.1.3.2"
     cis_level = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -237,7 +237,7 @@ control "cis_v100_3_1_1_3_3" {
     cis_item_id = "3.1.1.3.3"
     cis_level = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
@@ -258,7 +258,7 @@ control "cis_v100_3_2" {
     cis_item_id = "3.2"
     cis_level = 2
   })
-  sql = <<EOQ
+  sql = <<-EOQ
     select
       -- Required Columns
       account_id as resource,
