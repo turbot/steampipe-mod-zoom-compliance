@@ -4,11 +4,16 @@ Automated scanning of your Zoom account configuration against 100+ [CIS Zoom sec
 
 ![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/console-output.png?raw=true)
 
-## Current CIS Control Checks:
+## Current Zoom CIS Control Checks:
 1. [Account Settings](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_1) – Meeting, recording and telephony controls.
 2. [IM Management](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_2) – Messaging security and storage controls.
 3. [Advanced Security](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_3_1) - Security and authentication controls.
 
+## Other Compliance Scanning Steampipe Mods:
+* [AWS - CIS & PCI](https://github.com/turbot/steampipe-mod-aws-compliance)
+* [Azure - CIS](https://github.com/turbot/steampipe-mod-azure-compliance)
+* [GCP - CIS](https://github.com/turbot/steampipe-mod-gcp-compliance)
+* [GitHub - Best Practices](https://github.com/turbot/steampipe-mod-github-sherlock)
 
 ## Quick start
 
