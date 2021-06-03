@@ -1,52 +1,69 @@
-![image](https://hub.steampipe.io/images/mods/turbot/zoom-compliance-social-graphic.png)
+# Zoom CIS Compliance Scans
 
-# Zoom Compliance Mod for Steampipe
+Automated scanning of your Zoom account configuration against 170+ [CIS Zoom security benchmark](https://www.cisecurity.org/benchmark/zoom/) controls.
 
-Run individual configuration, compliance and security controls or full compliance benchmarks for CIS for [Zoom](https://zoom.us).
+![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/console-output.png?raw=true)
 
-Can you write SQL and HCL? [Fork this repo](#developing) as the basis for your own custom compliance checks!
+## Current CIS Control Checks:
+1. [Account Settings](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_1) – Meeting, recording and telephony controls.
+2. [IM Management](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_2) – Messaging security and storage controls.
+3. [Advanced Security](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_3_1) - Security and authentication controls.
 
-- **[Get started →](https://hub.steampipe.io/mods/turbot/zoom_compliance)**
-- Documentation: [Controls](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls)
-- Community: [Slack Channel](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)
-- Get involved: [Issues](https://github.com/turbot/steampipe-mod-zoom-compliance/issues)
 
 ## Quick start
 
-Install the Zoom plugin with [Steampipe](https://steampipe.io):
+1) Download and install Steampipe (https://steampipe.io/downloads). Or use Brew:
+
+```shell
+brew tap turbot/tap
+brew install steampipe
+
+steampipe -v 
+steampipe version 0.5.1
+```
+
+2) Install the Zoom plugin with [Steampipe](https://steampipe.io):
 
 ```shell
 steampipe plugin install zoom
 ```
+3) Configure your credentials in `/.steampipe/config/zoom.spc`
+```hcl
+connection "zoom" {
+  plugin     = "zoom"
+  api_key    = "9m_kAcfuTlW_JCrvoMYK6g"
+  api_secret = "lEEDVf3SgyQWckN3ASqMpXWpCixkwMzgnZY7"
+}
+```
 
-Clone:
+5) Clone this repo:
 
 ```sh
 git clone git@github.com:turbot/steampipe-mod-zoom-compliance
 cd steampipe-mod-zoom-compliance
 ```
 
-Run all benchmarks:
+4) Run all benchmarks:
 
 ```shell
 steampipe check all
 ```
 
-Run a benchmark:
+Run a specifc benchmark:
 
 ```shell
-steampipe check benchmark.cis_v100
+steampipe check benchmark.cis_v100_1_1_1
 ```
 
-Run a specific control:
+Use Steampipe introspection to view all current controls:
 
-```shell
-steampipe check control.cis_v100_1_2_3_1
+```
+steampipe query "select resource_name from steampipe_control;"
 ```
 
-## Developing
+## Contributing
 
-Have an idea but aren't sure how to get started?
+Have an idea on how to improve the scans, or just want to help maintain and extend this mod ([or others](https://github.com/topics/steampipe-mod))?
 
 - **[Join our Slack community →](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)**
 - **[Mod developer guide →](https://steampipe.io/docs/steampipe-mods/writing-mods.md)**
@@ -57,7 +74,7 @@ Have an idea but aren't sure how to get started?
 - Steampipe Zoom plugin installed (see above)
 
 **Fork**:
-Click on the GitHub Fork Widget. (Don't forget to :star: the repo!)
+Click on the GitHub Fork Widget (and Don't forget to :star: the repo!)
 
 **Clone**:
 
@@ -69,23 +86,7 @@ git clone git@github.com:YOUR-USERNAME/steampipe-mod-zoom-compliance
 cd steampipe-mod-zoom-compliance
 ```
 
-**View controls and benchmarks**:
-
-```
-steampipe query "select resource_name from steampipe_control;"
-```
-
-```sql
-steampipe query
-> select
-    resource_name
-  from
-    steampipe_benchmark
-  order by
-    resource_name;
-```
-
-## Contributing
+3. Get coding and put your SQL skills to the test!
 
 Thanks for getting involved! We would love to have you [join our Slack community](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g) and hang out with other Mod developers.
 
