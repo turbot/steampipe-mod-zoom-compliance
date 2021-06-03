@@ -1,6 +1,6 @@
 # Zoom CIS Compliance Scans
 
-Automated scanning of your Zoom account configuration against 170+ [CIS Zoom security benchmark](https://www.cisecurity.org/benchmark/zoom/) controls.
+Automated scanning of your Zoom account configuration against 100+ [CIS Zoom security benchmark](https://www.cisecurity.org/benchmark/zoom/) controls.
 
 ![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/console-output.png?raw=true)
 
