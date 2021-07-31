@@ -71,7 +71,7 @@ steampipe query "select resource_name from steampipe_control;"
 Have an idea on how to improve the scans, or just want to help maintain and extend this mod ([or others](https://github.com/topics/steampipe-mod))?
 
 - **[Join our Slack community →](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)**
-- **[Mod developer guide →](https://steampipe.io/docs/steampipe-mods/writing-mods.md)**
+- **[Mod developer guide →](https://steampipe.io/docs/using-steampipe/writing-controls)**
 
 **Prerequisites**:
 
