@@ -24,7 +24,7 @@ brew tap turbot/tap
 brew install steampipe
 
 steampipe -v 
-steampipe version 0.5.1
+steampipe version 0.8.2
 ```
 
 2) Install the Zoom plugin with [Steampipe](https://steampipe.io):
@@ -44,7 +44,7 @@ connection "zoom" {
 5) Clone this repo:
 
 ```sh
-git clone git@github.com:turbot/steampipe-mod-zoom-compliance
+git clone https://github.com/turbot/steampipe-mod-zoom-compliance.git
 cd steampipe-mod-zoom-compliance
 ```
 
