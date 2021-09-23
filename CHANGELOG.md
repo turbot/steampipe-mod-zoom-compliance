@@ -1,3 +1,13 @@
+## v0.4 [2021-09-23]
+
+_Enhancements_
+
+- The README file is now cleaner and more structured, inlcuding additional information on how to use and contribute to the available compliance benchmarks
+
+_Bug fixes_
+
+- Fixed broken links to the Mod developer guide in README.md
+
 ## v0.3 [2021-06-01]
 
 _Bug fixes_
