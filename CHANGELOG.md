@@ -2,7 +2,7 @@
 
 _Enhancements_
 
-- The README file is now cleaner and more structured, inlcuding additional information on how to use and contribute to the available compliance benchmarks
+- README.md is now cleaner and more structured, inlcuding additional information on how to use and contribute to the available compliance benchmarks
 
 _Bug fixes_
 
