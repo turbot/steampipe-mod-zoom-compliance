@@ -6,6 +6,8 @@ repository: "https://github.com/turbot/steampipe-mod-zoom-compliance"
 
 Run individual configuration, compliance and security controls or full compliance benchmarks for CIS for [Zoom](https://zoom.us).
 
+![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/console-output.png)
+
 ## References
 
 [Zoom](https://zoom.us/) provides videotelephony and online chat services through a cloud-based peer-to-peer software platform.
