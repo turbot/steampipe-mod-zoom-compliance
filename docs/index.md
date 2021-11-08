@@ -6,7 +6,7 @@ repository: "https://github.com/turbot/steampipe-mod-zoom-compliance"
 
 Run individual configuration, compliance and security controls or full compliance benchmarks for CIS for [Zoom](https://zoom.us).
 
-![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/console-output.png)
+![image](https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/console-output.png)
 
 ## References
 
