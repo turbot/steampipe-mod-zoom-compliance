@@ -66,6 +66,10 @@ Use Steampipe introspection to view all current controls:
 steampipe query "select resource_name from steampipe_control;"
 ```
 
+## Guidance
+
+If you check everything you'll see a long list of messages, many of which are likely to be alarms. How to prioritize what actions to take? In [The Control Freak's guide to Zoom](https://newsletter.turbot.com/p/the-control-freaks-guide-to-zoom), David Boeke has helpfully summarized the top 10 things that might warrant intervention.
+
 ## Contributing
 
 Have an idea on how to improve the scans, or just want to help maintain and extend this mod ([or others](https://github.com/topics/steampipe-mod))?
