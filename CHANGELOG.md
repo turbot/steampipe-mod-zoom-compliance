@@ -1,8 +1,14 @@
+## v0.5 [2021-11-10]
+
+_Enhancements_
+
+- `docs/index.md` file now includes the console output image
+
 ## v0.4 [2021-09-23]
 
 _Enhancements_
 
-- README.md is now cleaner and more structured, inlcuding additional information on how to use and contribute to the available compliance benchmarks
+- README.md is now cleaner and more structured, including additional information on how to use and contribute to the available compliance benchmarks
 
 _Bug fixes_
 
