@@ -1,3 +1,12 @@
+// Benchmarks and controls for specific services should override the "service" tag
+locals {
+  zoom_compliance_common_tags = {
+    category = "Compliance"
+    plugin   = "zoom"
+    service  = "Zoom"
+  }
+}
+
 mod "zoom_compliance" {
   title         = "Zoom Compliance"
   description   = "Run individual configuration, compliance and security controls or full compliance benchmarks for CIS for Zoom using Steampipe."
