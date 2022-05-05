@@ -7,9 +7,6 @@ locals {
 
 benchmark "cis_v100_1_1_7" {
   title         = "1.1.7 Admin Options"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.7"
-  # })
   children = [
     control.cis_v100_1_1_7_1,
     control.cis_v100_1_1_7_2,

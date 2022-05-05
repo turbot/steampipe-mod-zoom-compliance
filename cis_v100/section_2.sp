@@ -13,9 +13,6 @@ locals {
 
 benchmark "cis_v100_2" {
   title         = "2 IM Management"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "2"
-  # })
   children = [
     benchmark.cis_v100_2_1,
     control.cis_v100_2_2,
@@ -28,9 +25,6 @@ benchmark "cis_v100_2" {
 
 benchmark "cis_v100_2_1" {
   title         = "2.1 IM Settings"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "2.1"
-  # })
   children = [
     benchmark.cis_v100_2_1_1,
     benchmark.cis_v100_2_1_2,

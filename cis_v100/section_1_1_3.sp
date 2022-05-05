@@ -6,9 +6,6 @@ locals {
 
 benchmark "cis_v100_1_1_3" {
   title         = "1.1.3 In Meeting (Basic)"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.3"
-  # })
   children = [
     benchmark.cis_v100_1_1_3_1,
     benchmark.cis_v100_1_1_3_2,
@@ -41,9 +38,6 @@ benchmark "cis_v100_1_1_3" {
 
 benchmark "cis_v100_1_1_3_1" {
   title         = "1.1.3.1"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.3.1"
-  # })
   children = [
     control.cis_v100_1_1_3_1_1,
     control.cis_v100_1_1_3_1_2,
@@ -91,9 +85,6 @@ control "cis_v100_1_1_3_1_2" {
 
 benchmark "cis_v100_1_1_3_2" {
   title         = "1.1.3.2 Sound notification when someone joins or leaves"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.3.2"
-  # })
   children = [
     control.cis_v100_1_1_3_2_1,
     control.cis_v100_1_1_3_2_2,
@@ -175,9 +166,6 @@ control "cis_v100_1_1_3_2_3" {
 
 benchmark "cis_v100_1_1_3_3" {
   title         = "1.1.3.3 File Transfer"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.3.2"
-  # })
   children = [
     control.cis_v100_1_1_3_3_1,
     control.cis_v100_1_1_3_3_2,
@@ -225,9 +213,6 @@ control "cis_v100_1_1_3_3_2" {
 
 benchmark "cis_v100_1_1_3_4" {
   title         = "1.1.3.4 Screen sharing"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.3.4"
-  # })
   children = [
     control.cis_v100_1_1_3_4_1,
     control.cis_v100_1_1_3_4_2,
@@ -365,9 +350,6 @@ control "cis_v100_1_1_3_5_3" {
 
 benchmark "cis_v100_1_1_3_6" {
   title         = "1.1.3.6 Whiteboard"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.3.6"
-  # })
   children = [
     control.cis_v100_1_1_3_6_1,
     control.cis_v100_1_1_3_6_2,

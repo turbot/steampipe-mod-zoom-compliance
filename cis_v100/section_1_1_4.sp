@@ -7,9 +7,6 @@ locals {
 
 benchmark "cis_v100_1_1_4" {
   title         = "1.1.4 In Meeting (Advanced)"
-  # tags = merge(local.cis_v100_1_1_4_common_tags, {
-  #   cis_item_id = "1.1.4"
-  # })
   children = [
     benchmark.cis_v100_1_1_4_1,
     benchmark.cis_v100_1_1_4_2,
@@ -38,9 +35,6 @@ benchmark "cis_v100_1_1_4" {
 
 benchmark "cis_v100_1_1_4_1" {
   title         = "1.1.4.1 Select data center regions for meetings/webinars hosted by your account"
-  # tags = merge(local.cis_v100_1_1_4_common_tags, {
-  #   cis_item_id = "1.1.4.1"
-  # })
   children = [
     control.cis_v100_1_1_4_1_1,
     control.cis_v100_1_1_4_1_2,
@@ -108,9 +102,6 @@ control "cis_v100_1_1_4_1_2" {
 benchmark "cis_v100_1_1_4_2" {
   title         = "1.1.4.2 Breakout room"
   description   = "Breakout rooms allow you to split your Zoom meeting in up to 50 separate sessions. The meeting host can choose to split the participants of the meeting into these separate sessions automatically or manually, and can switch between sessions at any time."
-  # tags = merge(local.cis_v100_1_1_4_common_tags, {
-  #   cis_item_id = "1.1.4.2"
-  # })
   children = [
     control.cis_v100_1_1_4_2_1,
     control.cis_v100_1_1_4_2_2,
@@ -158,9 +149,6 @@ control "cis_v100_1_1_4_2_2" {
 benchmark "cis_v100_1_1_4_3" {
   title         = "1.1.4.3 Virtual background"
   description   = "The Virtual Background feature allows you to display an image or video as your background during a Zoom Meeting."
-  # tags = merge(local.cis_v100_1_1_4_common_tags, {
-  #   cis_item_id = "1.1.4.3"
-  # })
   children = [
     control.cis_v100_1_1_4_3_1,
     control.cis_v100_1_1_4_3_2,
@@ -239,9 +227,6 @@ control "cis_v100_1_1_4_3_3" {
 
 benchmark "cis_v100_1_1_4_4" {
   title         = "1.1.4.4 Peer to Peer connection while only 2 people in a meeting"
-  # tags = merge(local.cis_v100_1_1_4_common_tags, {
-  #   cis_item_id = "1.1.4.4"
-  # })
   children = [
     control.cis_v100_1_1_4_4_1,
     control.cis_v100_1_1_4_4_2,

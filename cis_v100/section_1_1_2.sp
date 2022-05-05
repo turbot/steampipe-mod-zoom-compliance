@@ -7,9 +7,6 @@ locals {
 
 benchmark "cis_v100_1_1_2" {
   title         = "1.1.2 Schedule Meeting"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.2"
-  # })
   children = [
     benchmark.cis_v100_1_1_2_1,
     control.cis_v100_1_1_2_2,
@@ -34,9 +31,6 @@ benchmark "cis_v100_1_1_2" {
 
 benchmark "cis_v100_1_1_2_1" {
   title         = "1.1.2.1 Meeting password requirement"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.2.1"
-  # })
   children = [
     control.cis_v100_1_1_2_1_1,
     control.cis_v100_1_1_2_1_2,

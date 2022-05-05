@@ -7,9 +7,6 @@ locals {
 
 benchmark "cis_v100_1_1_5" {
   title         = "1.1.5 Calendar and Contacts"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.5"
-  # })
   children = [
     control.cis_v100_1_1_5_1,
     control.cis_v100_1_1_5_2,

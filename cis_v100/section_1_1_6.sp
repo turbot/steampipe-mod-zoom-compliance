@@ -7,9 +7,6 @@ locals {
 
 benchmark "cis_v100_1_1_6" {
   title         = "1.1.6 Email Notification"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.6"
-  # })
   children = [
     benchmark.cis_v100_1_1_6_1,
     control.cis_v100_1_1_6_2,
@@ -27,9 +24,6 @@ benchmark "cis_v100_1_1_6" {
 
 benchmark "cis_v100_1_1_6_1" {
   title         = "1.1.6.1 When a cloud recording is available"
-  # tags = merge(local.cis_v100_common_tags, {
-  #   cis_item_id = "1.1.6.1"
-  # })
   children = [
     control.cis_v100_1_1_6_1_1,
     control.cis_v100_1_1_6_1_2,
