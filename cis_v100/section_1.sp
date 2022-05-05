@@ -5,7 +5,7 @@ locals {
 }
 
 benchmark "cis_v100_1" {
-  title         = "1 Account Settings"
+  title = "1 Account Settings"
   children = [
     benchmark.cis_v100_1_1,
     benchmark.cis_v100_1_2,

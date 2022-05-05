@@ -6,7 +6,7 @@ locals {
 }
 
 benchmark "cis_v100_1_3" {
-  title         = "1.3 Telephone"
+  title = "1.3 Telephone"
   children = [
     control.cis_v100_1_3_1,
     control.cis_v100_1_3_2,
@@ -15,39 +15,39 @@ benchmark "cis_v100_1_3" {
 
   tags = merge(local.cis_v100_1_3_common_tags, {
     service = "Zoom/Telephone"
-    type = "Benchmark"
+    type    = "Benchmark"
   })
 }
 
 control "cis_v100_1_3_1" {
-  title         = "1.3.1 Ensure toll call is set to enabled (Manual)"
-  description   = "Include the selected numbers in the Zoom client and the email invitation via the international numbers link. Participants can dial into meeting with the numbers. Further add/modify/remove the toll numbers as per organization requirements."
+  title       = "1.3.1 Ensure toll call is set to enabled (Manual)"
+  description = "Include the selected numbers in the Zoom client and the email invitation via the international numbers link. Participants can dial into meeting with the numbers. Further add/modify/remove the toll numbers as per organization requirements."
   tags = merge(local.cis_v100_1_3_common_tags, {
-    cis_item_id  = "1.3.1"
-    cis_type     = "manual"
-    cis_level    = 2
+    cis_item_id = "1.3.1"
+    cis_type    = "manual"
+    cis_level   = 2
   })
   sql = query.no_api_available.sql
 }
 
 control "cis_v100_1_3_2" {
-  title         = "1.3.2 Ensure mask phone number in the participant list is set to enabled (Manual)"
-  description   = "Phone numbers of users dialing into a meeting will be masked in the participant list. For example: 888****666"
+  title       = "1.3.2 Ensure mask phone number in the participant list is set to enabled (Manual)"
+  description = "Phone numbers of users dialing into a meeting will be masked in the participant list. For example: 888****666"
   tags = merge(local.cis_v100_1_3_common_tags, {
-    cis_item_id  = "1.3.2"
-    cis_type     = "manual"
-    cis_level    = 2
+    cis_item_id = "1.3.2"
+    cis_type    = "manual"
+    cis_level   = 2
   })
   sql = query.no_api_available.sql
 }
 
 control "cis_v100_1_3_3" {
-  title         = "1.3.3 Ensure global dial-in countries/regions is set to enabled (Manual)"
-  description   = "Countries/regions that frequently have participants who need to dial into meetings. The dial-in phone numbers of these locations appear in the email invitation, and can be used by participants dialing in from those locations. Further select Dial-in number(s) that are as per your local country or region laws, if any."
+  title       = "1.3.3 Ensure global dial-in countries/regions is set to enabled (Manual)"
+  description = "Countries/regions that frequently have participants who need to dial into meetings. The dial-in phone numbers of these locations appear in the email invitation, and can be used by participants dialing in from those locations. Further select Dial-in number(s) that are as per your local country or region laws, if any."
   tags = merge(local.cis_v100_1_3_common_tags, {
-    cis_item_id  = "1.3.3"
-    cis_type     = "manual"
-    cis_level    = 2
+    cis_item_id = "1.3.3"
+    cis_type    = "manual"
+    cis_level   = 2
   })
   sql = <<-EOQ
     select
