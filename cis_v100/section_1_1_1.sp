@@ -28,7 +28,7 @@ benchmark "cis_v100_1_1_1" {
   ]
 
   tags = merge(local.cis_v100_1_1_1_common_tags, {
-    service = "Zoom/Security"
+    service = "Zoom/Meeting"
     type    = "Benchmark"
   })
 }
