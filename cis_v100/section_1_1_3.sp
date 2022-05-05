@@ -1,8 +1,30 @@
 locals {
-  cis_v100_1_1_3_common_tags = merge(local.cis_v100_common_tags, {
+  cis_v100_1_1_3_common_tags = merge(local.cis_v100_1_1_common_tags, {
     cis_section_id = "1.1.3"
   })
 }
+
+locals {
+  cis_v100_1_1_3_1_common_tags = merge(local.cis_v100_1_1_3_common_tags, {
+    cis_section_id = "1.1.3.1"
+  })
+  cis_v100_1_1_3_2_common_tags = merge(local.cis_v100_1_1_3_common_tags, {
+    cis_section_id = "1.1.3.2"
+  })
+  cis_v100_1_1_3_3_common_tags = merge(local.cis_v100_1_1_3_common_tags, {
+    cis_section_id = "1.1.3.3"
+  })
+  cis_v100_1_1_3_4_common_tags = merge(local.cis_v100_1_1_3_common_tags, {
+    cis_section_id = "1.1.3.4"
+  })
+  cis_v100_1_1_3_5_common_tags = merge(local.cis_v100_1_1_3_common_tags, {
+    cis_section_id = "1.1.3.5"
+  })
+  cis_v100_1_1_3_6_common_tags = merge(local.cis_v100_1_1_3_common_tags, {
+    cis_section_id = "1.1.3.6"
+  })
+}
+
 
 benchmark "cis_v100_1_1_3" {
   title = "1.1.3 In Meeting (Basic)"
@@ -43,7 +65,7 @@ benchmark "cis_v100_1_1_3_1" {
     control.cis_v100_1_1_3_1_2,
   ]
 
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_1_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
   })
@@ -52,7 +74,7 @@ benchmark "cis_v100_1_1_3_1" {
 control "cis_v100_1_1_3_1_1" {
   title       = "1.1.3.1.1 Ensure allow meeting participants to send a message visible to all participants is set to disabled (Manual)"
   description = "Allow meeting participants to send a message visible to all participants. This can be further controlled from client end by the host / co-host."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_1_common_tags, {
     cis_item_id = "1.1.3.1.1"
     cis_type    = "manual"
     cis_level   = 2
@@ -74,7 +96,7 @@ control "cis_v100_1_1_3_1_1" {
 control "cis_v100_1_1_3_1_2" {
   title       = "1.1.3.1.2 Ensure prevent participants from saving chat is set to enabled (Manual)"
   description = "Prevent participants from saving chat, ensures that participants do not copy what is pasted in the zoom meeting chat."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_1_common_tags, {
     cis_item_id = "1.1.3.1.2"
     cis_type    = "manual"
     cis_level   = 2
@@ -90,17 +112,16 @@ benchmark "cis_v100_1_1_3_2" {
     control.cis_v100_1_1_3_2_3,
   ]
 
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_2_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
-    cis_item_id = "1.1.3.2"
   })
 }
 
 control "cis_v100_1_1_3_2_1" {
   title       = "1.1.3.2.1 Ensure sound notification when someone joins or leaves is set to enabled (Manual)"
   description = "Enable \"Play sound when participants join or leave\". This can also be controlled from host client end if required to be changed."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_2_common_tags, {
     cis_item_id = "1.1.3.2.1"
     cis_type    = "manual"
     cis_level   = 1
@@ -122,7 +143,7 @@ control "cis_v100_1_1_3_2_1" {
 control "cis_v100_1_1_3_2_2" {
   title       = "1.1.3.2.2 Ensure play sound for \"Host and co-host only\" is set to enabled (Manual)"
   description = "Change from \"Everyone\" option under [Play sound for] to \"Host and co-hosts only\"."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_2_common_tags, {
     cis_item_id = "1.1.3.2.2"
     cis_type    = "manual"
     cis_level   = 1
@@ -144,7 +165,7 @@ control "cis_v100_1_1_3_2_2" {
 control "cis_v100_1_1_3_2_3" {
   title       = "1.1.3.2.3 Ensure when someone joins by phone, ask to record their voice to use as the notification is set to enabled (Manual)"
   description = "Select \"Ask to record their voice to use as the notification\" option for \"When someone joins by phone\"."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_2_common_tags, {
     cis_item_id = "1.1.3.2.3"
     cis_type    = "manual"
     cis_level   = 1
@@ -170,17 +191,16 @@ benchmark "cis_v100_1_1_3_3" {
     control.cis_v100_1_1_3_3_2,
   ]
 
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_3_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
-    cis_item_id = "1.1.3.2"
   })
 }
 
 control "cis_v100_1_1_3_3_1" {
   title       = "1.1.3.3.1 Ensure hosts and participants can send files through the in-meeting chat is set to disabled (Manual)"
   description = "Hosts and participants can send files through the in-meeting chat. As this is account level setting keep this enabled. If option of file transfer is required, then use it along with allowing specific file extension."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_3_common_tags, {
     cis_item_id = "1.1.3.3.1"
     cis_type    = "manual"
     cis_level   = 1
@@ -202,7 +222,7 @@ control "cis_v100_1_1_3_3_1" {
 control "cis_v100_1_1_3_3_2" {
   title       = "1.1.3.3.2 Ensure only allow specified file types is set to enabled (Manual)"
   description = "Hosts and participants can send files through the in-meeting chat. And that too only the file types that are whitelisted. Provide the list of filetype that needs to be whitelisted e.g. .txt, .docx, .pdf, .xlsx"
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_3_common_tags, {
     cis_item_id = "1.1.3.3.2"
     cis_type    = "manual"
     cis_level   = 2
@@ -218,7 +238,7 @@ benchmark "cis_v100_1_1_3_4" {
     control.cis_v100_1_1_3_4_3,
   ]
 
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_4_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
     cis_item_id = "1.1.3.4"
@@ -228,7 +248,7 @@ benchmark "cis_v100_1_1_3_4" {
 control "cis_v100_1_1_3_4_1" {
   title       = "1.1.3.4.1 Ensure screen sharing is set to enabled (Manual)"
   description = "Allow host and participants to share their screen or content during meetings. Enable this option to ensure further options are customizable to control who can share screen or desktop audio."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_4_common_tags, {
     cis_item_id = "1.1.3.4.1"
     cis_type    = "manual"
     cis_level   = 1
@@ -250,7 +270,7 @@ control "cis_v100_1_1_3_4_1" {
 control "cis_v100_1_1_3_4_2" {
   title       = "1.1.3.4.2 Ensure \"who can share?\" is set to \"Host Only\" (Manual)"
   description = "Select \"Who can share?\" as \"Host Only\" here. This can be controlled by host for a particular meeting at desktop client software."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_4_common_tags, {
     cis_item_id = "1.1.3.4.2"
     cis_type    = "manual"
     cis_level   = 1
@@ -272,7 +292,7 @@ control "cis_v100_1_1_3_4_2" {
 control "cis_v100_1_1_3_4_3" {
   title       = "1.1.3.4.3 Ensure \"Who can start sharing when someone else is sharing?\" is set to \"Host Only\" (Manual)"
   description = "This setting decides who can share screen when someone is already sharing. This option should be restricted to \"Host Only\". This can be changed or controlled by host for a particular meeting instance."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_4_common_tags, {
     cis_item_id = "1.1.3.4.3"
     cis_type    = "manual"
     cis_level   = 1
@@ -293,8 +313,8 @@ control "cis_v100_1_1_3_4_3" {
 
 benchmark "cis_v100_1_1_3_5" {
   title = "1.1.3.5 Annotation"
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
-    cis_item_id = "1.1.3.5"
+  tags = merge(local.cis_v100_1_1_3_5_common_tags, {
+   type  = "Benchmark"
   })
   children = [
     control.cis_v100_1_1_3_5_1,
@@ -306,7 +326,7 @@ benchmark "cis_v100_1_1_3_5" {
 control "cis_v100_1_1_3_5_1" {
   title       = "1.1.3.5.1 Ensure annotation is set to disabled (Manual)"
   description = "Allow host and participants to use annotation tools to add information to shared screens."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_5_common_tags, {
     cis_item_id = "1.1.3.5.1"
     cis_type    = "manual"
     cis_level   = 2
@@ -328,7 +348,7 @@ control "cis_v100_1_1_3_5_1" {
 control "cis_v100_1_1_3_5_2" {
   title       = "1.1.3.5.2 Ensure allow saving of shared screens with annotations is set to disabled (Manual)"
   description = "Disable \"Allow saving of shared screens with annotations\"."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_5_common_tags, {
     cis_item_id = "1.1.3.5.2"
     cis_type    = "manual"
     cis_level   = 2
@@ -339,7 +359,7 @@ control "cis_v100_1_1_3_5_2" {
 control "cis_v100_1_1_3_5_3" {
   title       = "1.1.3.5.3 Ensure only the user who is sharing can annotate is set to enabled (Manual)"
   description = "Enable \"Only the user who is sharing can annotate\", to ensure that only host can annotate."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_5_common_tags, {
     cis_item_id = "1.1.3.5.3"
     cis_type    = "manual"
     cis_level   = 2
@@ -355,17 +375,16 @@ benchmark "cis_v100_1_1_3_6" {
     control.cis_v100_1_1_3_6_3,
   ]
 
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_6_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
-    cis_item_id = "1.1.3.6"
   })
 }
 
 control "cis_v100_1_1_3_6_1" {
   title       = "1.1.3.6.1 Ensure whiteboard is set to disabled (Manual)"
   description = "Allow host and participants to share whiteboard during a meeting."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_6_common_tags, {
     cis_item_id = "1.1.3.6.1"
     cis_type    = "manual"
     cis_level   = 2
@@ -387,7 +406,7 @@ control "cis_v100_1_1_3_6_1" {
 control "cis_v100_1_1_3_6_2" {
   title       = "1.1.3.6.2 Ensure allow saving of whiteboard content is set to disabled (Manual)"
   description = "Allow host and participants to share whiteboard during a meeting. And also allow saving of whiteboard content. This can be controlled at meeting level."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_6_common_tags, {
     cis_item_id = "1.1.3.6.2"
     cis_type    = "manual"
     cis_level   = 2
@@ -398,7 +417,7 @@ control "cis_v100_1_1_3_6_2" {
 control "cis_v100_1_1_3_6_3" {
   title       = "1.1.3.6.3 Ensure auto save whiteboard content when sharing is stopped is set to disabled (Manual)"
   description = "Allow host and participants to share whiteboard during a meeting. And disallow Auto save whiteboard content when sharing is stopped. This can be controlled at meeting level."
-  tags = merge(local.cis_v100_1_1_3_common_tags, {
+  tags = merge(local.cis_v100_1_1_3_6_common_tags, {
     cis_item_id = "1.1.3.6.3"
     cis_type    = "manual"
     cis_level   = 2

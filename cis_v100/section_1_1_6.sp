@@ -1,7 +1,12 @@
+locals {
+  cis_v100_1_1_6_common_tags = merge(local.cis_v100_1_1_common_tags, {
+    cis_section_id = "1.1.6"
+  })
+}
 
 locals {
-  cis_v100_1_1_6_common_tags = merge(local.cis_v100_common_tags, {
-    cis_section_id = "1.1.6"
+  cis_v100_1_1_6_1_common_tags = merge(local.cis_v100_1_1_6_common_tags, {
+    cis_section_id = "1.1.6.1"
   })
 }
 
@@ -30,7 +35,7 @@ benchmark "cis_v100_1_1_6_1" {
     control.cis_v100_1_1_6_1_3,
   ]
 
-  tags = merge(local.cis_v100_1_1_6_common_tags, {
+  tags = merge(local.cis_v100_1_1_6_1_common_tags, {
     service = "Zoom/Meeting"
     type    = "Benchmark"
   })
@@ -39,7 +44,7 @@ benchmark "cis_v100_1_1_6_1" {
 control "cis_v100_1_1_6_1_1" {
   title       = "1.1.6.1.1 Ensure when a cloud recording is available is set to enabled (Manual)"
   description = "Notify host when cloud recording is available. This can enable hosts to validate the recording for any confidential data, prior sharing the video at large."
-  tags = merge(local.cis_v100_1_1_6_common_tags, {
+  tags = merge(local.cis_v100_1_1_6_1_common_tags, {
     cis_item_id = "1.1.6.1.1"
     cis_type    = "manual"
     cis_level   = 1
@@ -61,7 +66,7 @@ control "cis_v100_1_1_6_1_1" {
 control "cis_v100_1_1_6_1_2" {
   title       = "1.1.6.1.2 Ensure Send a copy to the person who scheduled the meeting/webinar for the host is set to enabled (Manual)"
   description = "Send a copy to the person who scheduled the meeting/webinar for the host. This can enable meeting scheduler to validate the recording for any confidential data prior sharing the video at large."
-  tags = merge(local.cis_v100_1_1_6_common_tags, {
+  tags = merge(local.cis_v100_1_1_6_1_common_tags, {
     cis_item_id = "1.1.6.1.2"
     cis_type    = "manual"
     cis_level   = 2
@@ -72,7 +77,7 @@ control "cis_v100_1_1_6_1_2" {
 control "cis_v100_1_1_6_1_3" {
   title       = "1.1.6.1.3 Ensure send a copy to the Alternative Hosts is set to enabled (Manual)"
   description = "Send a copy to the Alternative Hosts. This can enable alternate hosts to validate the recording for any confidential data prior sharing the video at large."
-  tags = merge(local.cis_v100_1_1_6_common_tags, {
+  tags = merge(local.cis_v100_1_1_6_1_common_tags, {
     cis_item_id = "1.1.6.1.3"
     cis_type    = "manual"
     cis_level   = 2

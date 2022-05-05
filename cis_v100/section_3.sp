@@ -24,7 +24,7 @@ locals {
     cis_section_id = "3.1.1.2"
   })
   cis_v100_3_1_1_3_common_tags = merge(local.cis_v100_3_1_1_common_tags, {
-    cis_section_id = "3.1.1.2"
+    cis_section_id = "3.1.1.3"
   })
 }
 
@@ -128,7 +128,7 @@ control "cis_v100_3_1_1_1_3" {
   title       = "3.1.1.1.3 Ensure password cannot contain consecutive characters is set to enabled (Manual)"
   description = "Cannot contain consecutive characters (e.g. \"11111\", \"12345\", \"abcde\", or \"qwert\") and specify the length of consecutive characters to 4 or above."
   tags = merge(local.cis_v100_3_1_1_1_common_tags, {
-    cis_item_id = "3.1.1.1.1"
+    cis_item_id = "3.1.1.1.3"
     cis_level   = 2
   })
   sql = <<-EOQ

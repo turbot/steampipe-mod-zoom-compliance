@@ -1,6 +1,6 @@
 
 locals {
-  cis_v100_1_1_7_common_tags = merge(local.cis_v100_common_tags, {
+  cis_v100_1_1_7_common_tags = merge(local.cis_v100_1_1_common_tags, {
     cis_section_id = "1.1.7"
   })
 }
@@ -14,7 +14,7 @@ benchmark "cis_v100_1_1_7" {
     control.cis_v100_1_1_7_4,
   ]
 
-  tags = merge(local.cis_v100_1_1_6_common_tags, {
+  tags = merge(local.cis_v100_1_1_7_common_tags, {
     service = "Zoom/Meeting"
     type    = "Benchmark"
   })

@@ -1,7 +1,13 @@
 
 locals {
-  cis_v100_1_1_2_common_tags = merge(local.cis_v100_common_tags, {
+  cis_v100_1_1_2_common_tags = merge(local.cis_v100_1_1_common_tags, {
     cis_section_id = "1.1.2"
+  })
+}
+
+locals {
+  cis_v100_1_1_2_1_common_tags = merge(local.cis_v100_1_1_2_common_tags, {
+    cis_section_id = "1.1.2.1"
   })
 }
 
@@ -40,7 +46,7 @@ benchmark "cis_v100_1_1_2_1" {
     control.cis_v100_1_1_2_1_6,
   ]
 
-  tags = merge(local.cis_v100_1_1_2_common_tags, {
+  tags = merge(local.cis_v100_1_1_2_1_common_tags, {
     type        = "Benchmark"
   })
 }
@@ -48,7 +54,7 @@ benchmark "cis_v100_1_1_2_1" {
 control "cis_v100_1_1_2_1_1" {
   title       = "1.1.2.1.1 Have a minimum password length (Automated)"
   description = "For security purposes, Zoom has a few requirements that your password must meet. These apply when setting your initial password and when resetting your password. Minimum password length must be at least 8 characters."
-  tags = merge(local.cis_v100_1_1_2_common_tags, {
+  tags = merge(local.cis_v100_1_1_2_1_common_tags, {
     cis_item_id = "1.1.2.1.1"
     cis_type    = "automated"
     cis_level   = 1
@@ -70,7 +76,7 @@ control "cis_v100_1_1_2_1_1" {
 control "cis_v100_1_1_2_1_2" {
   title       = "1.1.2.1.2 Specify a password length: (Automated)"
   description = "For security purposes, Zoom has a few requirements that your password must meet. These apply when setting your initial password and when resetting your password. Password length must be at least 8 characters and cannot be longer than 32 characters."
-  tags = merge(local.cis_v100_1_1_2_common_tags, {
+  tags = merge(local.cis_v100_1_1_2_1_common_tags, {
     cis_item_id = "1.1.2.1.2"
     cis_type    = "automated"
     cis_level   = 1
@@ -92,7 +98,7 @@ control "cis_v100_1_1_2_1_2" {
 control "cis_v100_1_1_2_1_3" {
   title       = "1.1.2.1.3 Have at least 1 letter (a, b, c...) (Automated)"
   description = "For security purposes, Zoom has a few requirements that your password must meet. These apply when setting your initial password and when resetting your password. As per password requirements, have at least 1 letter (a, b, c...). This shall make the password strong."
-  tags = merge(local.cis_v100_1_1_2_common_tags, {
+  tags = merge(local.cis_v100_1_1_2_1_common_tags, {
     cis_item_id = "1.1.2.1.3"
     cis_type    = "automated"
     cis_level   = 1
@@ -114,7 +120,7 @@ control "cis_v100_1_1_2_1_3" {
 control "cis_v100_1_1_2_1_4" {
   title       = "1.1.2.1.4 Have at least 1 number (1, 2, 3...) (Automated)"
   description = "For security purposes, Zoom has a few requirements that your password must meet. These apply when setting your initial password and when resetting your password. As per password requirements, have at least 1 number (1, 2, 3...). This shall make the password strong."
-  tags = merge(local.cis_v100_1_1_2_common_tags, {
+  tags = merge(local.cis_v100_1_1_2_1_common_tags, {
     cis_item_id = "1.1.2.1.4"
     cis_type    = "automated"
     cis_level   = 1
@@ -136,7 +142,7 @@ control "cis_v100_1_1_2_1_4" {
 control "cis_v100_1_1_2_1_5" {
   title       = "1.1.2.1.5 Have at least 1 special character (!, @, #...) (Manual)"
   description = "For security purposes, Zoom has a few requirements that your password must meet. These apply when setting your initial password and when resetting your password. As per password requirements, include at least 1 special character (!, @, #...)."
-  tags = merge(local.cis_v100_1_1_2_common_tags, {
+  tags = merge(local.cis_v100_1_1_2_1_common_tags, {
     cis_item_id = "1.1.2.1.5"
     cis_type    = "automated"
     cis_level   = 2
@@ -158,8 +164,8 @@ control "cis_v100_1_1_2_1_5" {
 control "cis_v100_1_1_2_1_6" {
   title       = "1.1.2.1.6 Include both uppercase and lower case letters (Automated)"
   description = "For security purposes, Zoom has a few requirements that your password must meet. These apply when setting your initial password and when resetting your password. As per password requirements, include both uppercase and lower case letters."
-  tags = merge(local.cis_v100_1_1_2_common_tags, {
-    cis_item_id = "1.1.1.1.6"
+  tags = merge(local.cis_v100_1_1_2_1_common_tags, {
+    cis_item_id = "1.1.2.1.6"
     cis_type    = "manual"
     cis_level   = 2
   })

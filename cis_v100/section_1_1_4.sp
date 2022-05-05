@@ -1,7 +1,22 @@
 
 locals {
-  cis_v100_1_1_4_common_tags = merge(local.cis_v100_common_tags, {
+  cis_v100_1_1_4_common_tags = merge(local.cis_v100_1_1_common_tags, {
     cis_section_id = "1.1.4"
+  })
+}
+
+locals {
+  cis_v100_1_1_4_1_common_tags = merge(local.cis_v100_1_1_4_common_tags, {
+    cis_section_id = "1.1.4.1"
+  })
+  cis_v100_1_1_4_2_common_tags = merge(local.cis_v100_1_1_4_common_tags, {
+    cis_section_id = "1.1.4.2"
+  })
+  cis_v100_1_1_4_3_common_tags = merge(local.cis_v100_1_1_4_common_tags, {
+    cis_section_id = "1.1.4.3"
+  })
+  cis_v100_1_1_4_4_common_tags = merge(local.cis_v100_1_1_4_common_tags, {
+    cis_section_id = "1.1.4.4"
   })
 }
 
@@ -40,7 +55,7 @@ benchmark "cis_v100_1_1_4_1" {
     control.cis_v100_1_1_4_1_2,
   ]
 
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_1_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
   })
@@ -49,7 +64,7 @@ benchmark "cis_v100_1_1_4_1" {
 control "cis_v100_1_1_4_1_1" {
   title       = "1.1.4.1.1 Ensure select data center regions for meetings/webinars hosted by your account is set to enabled (Manual)"
   description = "Include all data center regions to provide the best experience for participants joining from all regions. Opting out of data center regions may limit CRC, Dial-in, Call Me, and Invite by Phone options for participants joining from those regions."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_1_common_tags, {
     cis_item_id = "1.1.4.1.1"
     cis_type    = "manual"
     cis_level   = 1
@@ -70,7 +85,7 @@ control "cis_v100_1_1_4_1_1" {
 control "cis_v100_1_1_4_1_2" {
   title       = "1.1.4.1.2 Ensure data center regions is set to local countries (Manual)"
   description = "Not all data centers are configured. Only the required ones are configured. Choose local or trusted region data centers."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_1_common_tags, {
     cis_item_id = "1.1.4.1.2"
     cis_type    = "manual"
     cis_level   = 1
@@ -106,7 +121,7 @@ benchmark "cis_v100_1_1_4_2" {
     control.cis_v100_1_1_4_2_2,
   ]
 
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_2_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
   })
@@ -115,7 +130,7 @@ benchmark "cis_v100_1_1_4_2" {
 control "cis_v100_1_1_4_2_1" {
   title       = "1.1.4.2.1 Ensure breakout room is set to enabled (Manual)"
   description = "Allow host to split meeting participants into separate, smaller rooms. This is beneficial, when participants need to be moved to separate virtual rooms."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_2_common_tags, {
     cis_item_id = "1.1.4.2.1"
     cis_type    = "manual"
     cis_level   = 2
@@ -136,7 +151,7 @@ control "cis_v100_1_1_4_2_1" {
 control "cis_v100_1_1_4_2_2" {
   title       = "1.1.4.2.2 Ensure allow host to assign participants to breakout rooms when scheduling is set to enabled (Manual)"
   description = "Allow host to assign participants to breakout rooms when scheduling."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_2_common_tags, {
     cis_item_id = "1.1.4.2.2"
     cis_type    = "manual"
     cis_level   = 2
@@ -153,7 +168,7 @@ benchmark "cis_v100_1_1_4_3" {
     control.cis_v100_1_1_4_3_3,
   ]
 
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_3_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
   })
@@ -162,7 +177,7 @@ benchmark "cis_v100_1_1_4_3" {
 control "cis_v100_1_1_4_3_1" {
   title       = "1.1.4.3.1 Ensure virtual background is set to enabled (Manual)"
   description = "Customize your background to keep your environment private from others in a meeting. This can be used with or without a green screen."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_3_common_tags, {
     cis_item_id = "1.1.4.3.1"
     cis_type    = "manual"
     cis_level   = 2
@@ -183,7 +198,7 @@ control "cis_v100_1_1_4_3_1" {
 control "cis_v100_1_1_4_3_2" {
   title       = "1.1.4.3.2 Ensure allow use of videos for virtual backgrounds is set to disabled (Manual)"
   description = "Customize your background to keep your environment private from others in a meeting. This can be used with or without a green screen. Allow use of videos for virtual backgrounds."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_3_common_tags, {
     cis_item_id = "1.1.4.3.2"
     cis_type    = "manual"
     cis_level   = 1
@@ -204,7 +219,7 @@ control "cis_v100_1_1_4_3_2" {
 control "cis_v100_1_1_4_3_3" {
   title       = "1.1.4.3.3 Ensure allow users to upload custom backgrounds is set to disabled (Manual)"
   description = "Customize your background to keep your environment private from others in a meeting. This can be used with or without a green screen. Allow users to upload custom backgrounds. Disabling this option ensures that participants do not have inappropriate backgrounds."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_3_common_tags, {
     cis_item_id = "1.1.4.3.3"
     cis_type    = "manual"
     cis_level   = 1
@@ -229,7 +244,7 @@ benchmark "cis_v100_1_1_4_4" {
     control.cis_v100_1_1_4_4_2,
   ]
 
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_4_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
   })
@@ -238,7 +253,7 @@ benchmark "cis_v100_1_1_4_4" {
 control "cis_v100_1_1_4_4_1" {
   title       = "1.1.4.4.1 Ensure peer to peer connection while only 2 people in a meeting is set to disabled (Manual)"
   description = "Allow users to directly connect to one another in a 2-person meeting."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_4_common_tags, {
     cis_item_id = "1.1.4.4.1"
     cis_type    = "manual"
     cis_level   = 2
@@ -260,7 +275,7 @@ control "cis_v100_1_1_4_4_1" {
 control "cis_v100_1_1_4_4_2" {
   title       = "1.1.4.4.2 Enable listening ports range is set as appropriate for organization (Manual)"
   description = "Listening ports range, select the appropriate ports as per your company or organization settings."
-  tags = merge(local.cis_v100_1_1_4_common_tags, {
+  tags = merge(local.cis_v100_1_1_4_4_common_tags, {
     cis_item_id = "1.1.4.4.2"
     cis_type    = "manual"
     cis_level   = 2

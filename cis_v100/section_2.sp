@@ -50,7 +50,7 @@ benchmark "cis_v100_2_1" {
 
   tags = merge(local.cis_v100_2_1_common_tags, {
     service = "Zoom/IM"
-    type = "Benchmark"
+    type    = "Benchmark"
   })
 }
 
@@ -65,7 +65,7 @@ benchmark "cis_v100_2_1_1" {
 
   tags = merge(local.cis_v100_2_1_1_common_tags, {
     service = "Zoom/IM"
-    type = "Benchmark"
+    type    = "Benchmark"
   })
 }
 
@@ -121,7 +121,7 @@ benchmark "cis_v100_2_1_2" {
 
   tags = merge(local.cis_v100_2_1_2_common_tags, {
     service = "Zoom/IM"
-    type = "Benchmark"
+    type    = "Benchmark"
   })
 }
 
@@ -187,7 +187,7 @@ benchmark "cis_v100_2_1_3" {
 
   tags = merge(local.cis_v100_2_1_3_common_tags, {
     service = "Zoom/Security"
-    type = "Benchmark"
+    type    = "Benchmark"
   })
 }
 
@@ -252,7 +252,7 @@ benchmark "cis_v100_2_1_4" {
 
   tags = merge(local.cis_v100_2_1_4_common_tags, {
     service = "Zoom/IM"
-    type = "Benchmark"
+    type    = "Benchmark"
   })
 }
 
@@ -300,7 +300,7 @@ control "cis_v100_2_2" {
   title       = "2.2 Enable IM groups is set to the organization's needs (Manual)"
   description = "IM Groups will be displayed in the Contacts section of your Zoom client. Creates groups as required."
   sql         = query.no_api_available.sql
-  tags = merge(local.cis_v100_2_1_4_common_tags, {
+  tags = merge(local.cis_v100_2_common_tags, {
     cis_item_id = "2.2"
     cis_level   = 2
   })
