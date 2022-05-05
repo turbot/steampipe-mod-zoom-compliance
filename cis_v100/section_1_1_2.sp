@@ -42,7 +42,6 @@ benchmark "cis_v100_1_1_2_1" {
 
   tags = merge(local.cis_v100_1_1_2_common_tags, {
     type        = "Benchmark"
-    cis_item_id = "1.1.2.1"
   })
 }
 

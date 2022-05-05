@@ -46,7 +46,6 @@ benchmark "cis_v100_1_1_3_1" {
   tags = merge(local.cis_v100_1_1_3_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
-    cis_item_id = "1.1.3.1"
   })
 }
 

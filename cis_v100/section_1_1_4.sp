@@ -43,7 +43,6 @@ benchmark "cis_v100_1_1_4_1" {
   tags = merge(local.cis_v100_1_1_4_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
-    cis_item_id = "1.1.4.1"
   })
 }
 
@@ -110,7 +109,6 @@ benchmark "cis_v100_1_1_4_2" {
   tags = merge(local.cis_v100_1_1_4_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
-    cis_item_id = "1.1.4.2"
   })
 }
 
@@ -158,7 +156,6 @@ benchmark "cis_v100_1_1_4_3" {
   tags = merge(local.cis_v100_1_1_4_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
-    cis_item_id = "1.1.4.3"
   })
 }
 
@@ -235,7 +232,6 @@ benchmark "cis_v100_1_1_4_4" {
   tags = merge(local.cis_v100_1_1_4_common_tags, {
     service     = "Zoom/Meeting"
     type        = "Benchmark"
-    cis_item_id = "1.1.4.4"
   })
 }
 
