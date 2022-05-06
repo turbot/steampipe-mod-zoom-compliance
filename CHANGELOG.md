@@ -1,3 +1,9 @@
+## v0.6 [2022-05-06]
+
+_Enhancements_
+
+- Added `category`, `service`, and `type` tags to benchmarks and controls. ([#10](https://github.com/turbot/steampipe-mod-zoom-compliance/pull/10))
+
 ## v0.5 [2021-11-10]
 
 _Enhancements_
