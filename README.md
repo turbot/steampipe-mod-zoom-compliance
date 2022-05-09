@@ -2,106 +2,92 @@
 
 Automated scanning of your Zoom account configuration against 100+ [CIS Zoom security benchmark](https://www.cisecurity.org/benchmark/zoom/) controls.
 
-![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/console-output.png?raw=true)
+Run checks in a dashboard:
+<!-- ![image](https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/add-benchmark-screenshots/docs/zoom_cis_v100_dashboard.png) -->
 
-## Current Zoom CIS Control Checks:
-1. [Account Settings](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_1) – Meeting, recording and telephony controls.
-2. [IM Management](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_2) – Messaging security and storage controls.
-3. [Advanced Security](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100_3_1) - Security and authentication controls.
+Or in a terminal:
+<!-- ![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/console-output.png?raw=true) -->
 
-## Other Compliance Scanning Steampipe Mods:
-* [AWS - CIS & PCI](https://github.com/turbot/steampipe-mod-aws-compliance)
-* [Azure - CIS](https://github.com/turbot/steampipe-mod-azure-compliance)
-* [GCP - CIS](https://github.com/turbot/steampipe-mod-gcp-compliance)
-* [GitHub - Best Practices](https://github.com/turbot/steampipe-mod-github-sherlock)
+Includes support for:
+* [Zoom CIS v1.0.0](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100)
 
-## Quick start
+## Getting started
 
-1) Download and install Steampipe (https://steampipe.io/downloads). Or use Brew:
+### Installation
 
-```shell
+Download and install Steampipe (https://steampipe.io/downloads). Or use Brew:
+
+```sh
 brew tap turbot/tap
 brew install steampipe
-
-steampipe -v 
-steampipe version 0.8.2
 ```
 
-2) Install the Zoom plugin with [Steampipe](https://steampipe.io):
+Install the Zoom plugin with [Steampipe](https://steampipe.io):
 
-```shell
+```sh
 steampipe plugin install zoom
 ```
-3) Configure your credentials in `/.steampipe/config/zoom.spc`
-```hcl
-connection "zoom" {
-  plugin     = "zoom"
-  api_key    = "9m_kAcfuTlW_JCrvoMYK6g"
-  api_secret = "lEEDVf3SgyQWckN3ASqMpXWpCixkwMzgnZY7"
-}
-```
 
-5) Clone this repo:
+Clone:
 
 ```sh
 git clone https://github.com/turbot/steampipe-mod-zoom-compliance.git
 cd steampipe-mod-zoom-compliance
 ```
 
-4) Run all benchmarks:
+### Usage
 
-```shell
+Start your dashboard server to get started:
+
+```sh
+steampipe dashboard
+```
+
+By default, the dashboard interface will then be launched in a new browser
+window at https://localhost:9194. From here, you can run benchmarks by
+selecting one or searching for a specific one.
+
+Instead of running benchmarks in a dashboard, you can also run them within your
+terminal with the `steampipe check` command:
+
+Run all benchmarks:
+
+```sh
 steampipe check all
 ```
 
-Run a specifc benchmark:
+Run a single benchmark:
 
-```shell
+```sh
 steampipe check benchmark.cis_v100_1_1_1
 ```
 
-Use Steampipe introspection to view all current controls:
+Run a specific control:
 
+```sh
+steampipe check control.cis_v100_1_1_1_3
 ```
-steampipe query "select resource_name from steampipe_control;"
-```
 
-## Guidance
+Different output formats are also available, for more information please see
+[Output Formats](https://steampipe.io/docs/reference/cli/check#output-formats).
 
-If you check everything you'll see a long list of messages, many of which are likely to be alarms. How to prioritize what actions to take? In [The Control Freak's guide to Zoom](https://newsletter.turbot.com/p/the-control-freaks-guide-to-zoom), David Boeke has helpfully summarized the top 10 things that might warrant intervention.
+### Credentials
+
+This mod uses the credentials configured in the [Steampipe Zoom plugin](https://hub.steampipe.io/plugins/turbot/zoom).
+
+### Configuration
+
+No extra configuration is required.
 
 ## Contributing
 
-Have an idea on how to improve the scans, or just want to help maintain and extend this mod ([or others](https://github.com/topics/steampipe-mod))?
+If you have an idea for additional controls or just want to help maintain and extend this mod ([or others](https://github.com/topics/steampipe-mod)) we would love you to join the community and start contributing.
 
-- **[Join our Slack community →](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)**
-- **[Mod developer guide →](https://steampipe.io/docs/using-steampipe/writing-controls)**
-
-**Prerequisites**:
-
-- [Steampipe installed](https://steampipe.io/downloads)
-- Steampipe Zoom plugin installed (see above)
-
-**Fork**:
-Click on the GitHub Fork Widget (and Don't forget to :star: the repo!)
-
-**Clone**:
-
-1. Change the current working directory to the location where you want to put the cloned directory on your local filesystem.
-2. Type the clone command below inserting your GitHub username instead of `YOUR-USERNAME`:
-
-```sh
-git clone git@github.com:YOUR-USERNAME/steampipe-mod-zoom-compliance
-cd steampipe-mod-zoom-compliance
-```
-
-3. Get coding and put your SQL skills to the test!
-
-Thanks for getting involved! We would love to have you [join our Slack community](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g) and hang out with other Mod developers.
+- **[Join our Slack community →](https://steampipe.io/community/join)** and hang out with other Mod developers.
 
 Please see the [contribution guidelines](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [Apache 2.0 open source license](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/LICENSE).
 
-`help wanted` issues:
+Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
 - [Steampipe](https://github.com/turbot/steampipe/labels/help%20wanted)
 - [Zoom Compliance Mod](https://github.com/turbot/steampipe-mod-zoom-compliance/labels/help%20wanted)
