@@ -1,3 +1,9 @@
+## v0.7 [2022-05-09]
+
+_Enhancements_
+
+- Updated docs/index.md and README with new dashboard screenshots and latest format. ([#14](https://github.com/turbot/steampipe-mod-zoom-compliance/pull/14))
+
 ## v0.6 [2022-05-06]
 
 _Enhancements_
