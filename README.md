@@ -3,10 +3,10 @@
 Automated scanning of your Zoom account configuration against 100+ [CIS Zoom security benchmark](https://www.cisecurity.org/benchmark/zoom/) controls.
 
 Run checks in a dashboard:
-<!-- ![image](https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/add-benchmark-screenshots/docs/zoom_cis_v100_dashboard.png) -->
+![image](https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/zoom_cis_v100_dashboard.png)
 
 Or in a terminal:
-<!-- ![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/console-output.png?raw=true) -->
+![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/zoom_cis_v100_terminal.png?raw=true)
 
 Includes support for:
 * [Zoom CIS v1.0.0](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100)
