@@ -1,4 +1,4 @@
-# Zoom CIS Compliance Scans
+# Zoom Compliance Mod for Steampipe
 
 Automated scanning of your Zoom account configuration against 100+ [CIS Zoom security benchmark](https://www.cisecurity.org/benchmark/zoom/) controls.
 
