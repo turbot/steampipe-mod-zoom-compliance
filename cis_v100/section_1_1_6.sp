@@ -120,10 +120,10 @@ control "cis_v100_1_1_6_3" {
       -- Required Columns
       account_id as resource,
       case
-        when (email_notification -> 'jbh_reminder')::bool then 'ok'
+        when (email_notification -> 'cancel_meeting_reminder')::bool then 'ok'
         else 'alarm'
       end as status,
-      'Meeting is cancelled notification is ' || case when (email_notification -> 'jbh_reminder')::bool then 'enabled' else 'disabled' end || '.' as reason
+      'Meeting is cancelled notification is ' || case when (email_notification -> 'cancel_meeting_reminder')::bool then 'enabled' else 'disabled' end || '.' as reason
     from
       zoom_account_settings
   EOQ
