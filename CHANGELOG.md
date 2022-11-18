@@ -1,3 +1,9 @@
+## v0.8 [2022-11-18]
+
+_Bug fixes_
+
+- Fix query for `cis_v100_1_1_6_3` control to check `cancel_meeting_reminder` instead of `jbh_reminder` in `email_notification` column. ([#17](https://github.com/turbot/steampipe-mod-zoom-compliance/pull/17)) (Thanks to [@shuetisha](https://github.com/shuetisha) for the fix!)
+
 ## v0.7 [2022-05-09]
 
 _Enhancements_
