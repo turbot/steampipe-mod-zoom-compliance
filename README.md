@@ -1,27 +1,24 @@
 # Zoom Compliance Mod for Powerpipe
 
 > [!IMPORTANT]  
-> Steampipe mods are [migrating to Powerpipe format](https://powerpipe.io) to gain new features. This mod currently works with both Steampipe and Powerpipe, but will only support Powerpipe from v1.x onward.
+> [Powerpipe](https://powerpipe.io) is now the preferred way to run this mod! [Migrating from Steampipe →](https://powerpipe.io/blog/migrating-from-steampipe)
+>
+> All v0.x versions of this mod will work in both Steampipe and Powerpipe, but v1.0.0 onwards will be in Powerpipe format only.
 
 Automated scanning of your Zoom account configuration against 100+ [CIS Zoom security benchmark](https://www.cisecurity.org/benchmark/zoom/) controls.
 
 Run checks in a dashboard:
-<!-- ![image](https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/zoom_cis_v100_dashboard.png) -->
-![image](https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/add-new-checks/docs/zoom_cis_v100_dashboard.png)
+![image](https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/zoom_cis_v100_dashboard.png)
 
 Or in a terminal:
-<!-- ![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/zoom_cis_v100_terminal.png?raw=true) -->
-![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/add-new-checks/docs/zoom_cis_v100_terminal.png?raw=true)
-
-Includes support for:
-* [Zoom CIS v1.0.0](https://hub.steampipe.io/mods/turbot/zoom_compliance/controls/benchmark.cis_v100)
+![image](https://github.com/turbot/steampipe-mod-zoom-compliance/blob/main/docs/zoom_cis_v100_terminal.png?raw=true)
 
 ## Documentation
 
 - **[Benchmarks and controls →](https://hub.powerpipe.io/mods/turbot/zoom_compliance/controls)**
 - **[Named queries →](https://hub.powerpipe.io/mods/turbot/zoom_compliance/queries)**
 
-## Getting started
+## Getting Started
 
 ### Installation
 
@@ -61,7 +58,7 @@ Start the dashboard server:
 powerpipe server
 ```
 
-Browse and view your dashboards at **https://localhost:9033**.
+Browse and view your dashboards at **http://localhost:9033**.
 
 ### Running Checks in Your Terminal
 

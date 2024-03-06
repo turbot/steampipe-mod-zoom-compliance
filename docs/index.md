@@ -2,19 +2,16 @@
 
 Run individual configuration, compliance and security controls or full compliance benchmarks for CIS for [Zoom](https://zoom.us).
 
-<!-- <img src="https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/zoom_compliance_dashboard.png" width="50%" type="thumbnail"/>
+<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/zoom_compliance_dashboard.png" width="50%" type="thumbnail"/>
 <img src="https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/zoom_cis_v100_dashboard.png" width="50%" type="thumbnail"/>
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/zoom_cis_v100_terminal.png" width="50%" type="thumbnail"/> -->
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/add-new-checks/docs/zoom_compliance_dashboard.png" width="50%" type="thumbnail"/>
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/add-new-checks/docs/zoom_cis_v100_dashboard.png" width="50%" type="thumbnail"/>
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/add-new-checks/docs/zoom_cis_v100_terminal.png" width="50%" type="thumbnail"/>
+<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-zoom-compliance/main/docs/zoom_cis_v100_terminal.png" width="50%" type="thumbnail"/>
 
 ## Documentation
 
 - **[Benchmarks and controls →](https://hub.powerpipe.io/mods/turbot/zoom_compliance/controls)**
 - **[Named queries →](https://hub.powerpipe.io/mods/turbot/zoom_compliance/queries)**
 
-## Getting started
+## Getting Started
 
 ### Installation
 
@@ -54,7 +51,7 @@ Start the dashboard server:
 powerpipe server
 ```
 
-Browse and view your dashboards at **https://localhost:9033**.
+Browse and view your dashboards at **http://localhost:9033**.
 
 ### Running Checks in Your Terminal
 
