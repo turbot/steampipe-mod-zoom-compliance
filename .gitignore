@@ -17,3 +17,7 @@
 # Ignore swap files
 *.swo
 *.swp
+
+# Powerpipe variable files
+*.ppvars
+*.auto.ppvars
