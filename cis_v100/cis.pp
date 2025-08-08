@@ -6,7 +6,7 @@ locals {
 }
 
 benchmark "cis_v100" {
-  title       = "CIS v1.0.0"
+  title       = "Zoom CIS v1.0.0"
   description = "The CIS Zoom Benchmark provides prescriptive guidance for configuring security options for Zoom."
   #documentation = file("./cis_v1_3_0/docs/cis-overview.md")
   children = [
